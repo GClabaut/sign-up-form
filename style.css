@@ -1,0 +1,67 @@
+@font-face {
+  font-family: norse;
+  src: url(./asset/Norse-Bold.otf);
+}
+
+:root {
+  --white: rgb(255,250,250);
+}
+
+body {
+  font-family: sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sidebar {
+  background-image: url("./asset/cherry.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 33%;
+}
+
+.odin {
+  font-family: norse, sans-serif;
+  font-size: clamp(2rem, 4vw + 3rem, 8rem);
+  margin-top: clamp(15rem, 20vh, 20rem);
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: clamp(2rem, 4vw + 5rem, 5rem);
+  min-height: 85%;
+  background-image: url(asset/odin-lined.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+a:any-link {
+  color: var(--white);
+}
+
+.credit {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+}
