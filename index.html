@@ -20,31 +20,53 @@
 
   <div class="content">
 
-    <h1>This is not a real online service! You know you need something like this in your lige to help you realize your deepest dreams. Sign up <i>now</i> to get started.</h1>
+    <div class="intro">
+      <h2>This is not a real online service! You know you need something like this in your lige to help you realize your deepest dreams. Sign up <i>now</i> to get started.</h2>
 
-    <h1>You <i>know</i> you want to.</h1>
+      <h2>You <i>know</i> you want to.</h2>
+    </div>
 
     <div class="form">
-      <h1>Let's do this!</h1>
-      <form action="https://httpbin.org/post" method="post">
+      <h2>Let's do this!</h2>
+      <form action="https://httpbin.org/post" method="post" id="account">
         <div class="left">
-          <label for="first_name">First Name</label>
-          <input type="text" name="first_name" id="first_name">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password">
+          <div class="input">
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name" pattern="^[a-zA-Z0-9]+" required>
+          </div>
+          <div class="input">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+          </div>
+          <div class="input">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+          </div>
         </div>
         <div class="right">
-          <label for="last_name">Last Name</label>
-          <input type="text" name="last_name" id="last_name">
-          <label for="phone">Phone Number</label>
-          <input type="number" name="phone" id="phone">
-          <label for="confirm">Confirm Password</label>
-          <input type="password" name="confirm" id="confirm">
+          <div class="input">
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name" pattern="^[a-zA-Z0-9]+" required>
+          </div>
+          <div class="input">
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$">
+          </div>
+          <div class="input">
+            <label for="confirm">Confirm Password</label>
+            <input type="password" name="confirm" id="confirm" required>
+          </div>
+          
         </div>
       </form>
     </div>
+
+    <div class="foot">
+      <button type="submit" form="account">Create Account</button>
+
+      <p>Already have an account?&nbsp;<a href="">Log in</a>&nbsp;</p>
+    </div>
+
 
   </div>
 
